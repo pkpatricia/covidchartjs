@@ -12,7 +12,7 @@ d3.json(query).then(function(data) {
     data.forEach((data) => {
 
         //console.log(`The state of ${data.state}'s information was last updated on ${data.lastUpdateDate}.`);
-        console.log(data.state + " " + data.metrics.testPositivityRatio * 100);
+        console.log(data.state + " " + (data.metrics.testPositivityRatio * 100).toPrecision(3));
         //console.log(data);
     });
 });
