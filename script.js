@@ -1,3 +1,5 @@
+
+
 var ctx = document.getElementById('myChart').getContext('2d');
 
 // Get the data
@@ -13,7 +15,7 @@ d3.json("https://api.covidtracking.com/v1/states/current.json").then(function(da
         states.push(data.state);
         percentages.push(((data.positive / data.totalTestResults) * 100).toPrecision(3));
         console.log("The state of " + data.state + " currently has a positive testing percentage of: " + ((data.positive / data.totalTestResults) * 100).toPrecision(3) + "%.");
-        console.log(`The state of ${data.state}'s information was last updated on ${data.lastUpdateEt}.`);
+        console.log(`The state of ${data.state}'s information was last updated on ${(data.lastUpdateEt)}.`);
     });
 
     /*data.forEach((data) => {
