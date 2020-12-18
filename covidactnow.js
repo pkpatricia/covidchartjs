@@ -1,5 +1,4 @@
-// var queryUrl = `https://www.quandl.com/api/v3/datasets/WIKI/AMZN.json?start_date=2016-10-01&end_date=2017-10-01&collapse=monthly&api_key=${apiKey}`;
-// var queryUrl = `https://www.quandl.com/api/v3/datasets/WIKI/AMZN.json?start_date=2016-10-01&end_date=2017-10-01&collapse=monthly&api_key=${apiKey}`;
+
 const query = `https://api.covidactnow.org/v2/states.timeseries.json?apiKey=${API_KEY}`;
 var ctx = document.getElementById('myChart').getContext('2d');
 
