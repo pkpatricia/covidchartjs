@@ -13,7 +13,12 @@ d3.json("https://api.covidtracking.com/v1/states/current.json").then(function(da
         states.push(data.state);
         percentages.push(((data.positive / data.totalTestResults) * 100).toPrecision(3));
         console.log("The state of " + data.state + " currently has a positive testing percentage of: " + ((data.positive / data.totalTestResults) * 100).toPrecision(3) + "%.");
+        console.log(`The state of ${data.state}'s information was last updated on ${data.lastUpdateEt}.`);
     });
+
+    /*data.forEach((data) => {
+        console.log(`The state of ${data.state}'s information was last updated on ${data.lastUpdateEt}.`);
+    })*/
 
     var myBarChart = new Chart(ctx, {
         type: 'bar',
@@ -34,8 +39,6 @@ d3.json("https://api.covidtracking.com/v1/states/current.json").then(function(da
                 yAxes: [{
                     ticks: {
                         beginAtZero: 'True',
-                        max: 26,
-                        min: 0,
                         stepSize: 2
                     }
                 }]
