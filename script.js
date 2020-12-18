@@ -1,4 +1,4 @@
-var ctx = document.getElementById('myChart');
+var ctx = document.getElementById('myChart').getContext('2d');
 
 // Get the data
 d3.json("https://api.covidtracking.com/v1/states/current.json").then(function(data) {
